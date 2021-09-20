@@ -17,8 +17,9 @@ def run_container():
 	image=input("Enter image name : ")
 	container_name = input("Enter container name : ")
 	cmd = f'docker run -- name {container_name} {image}'
-	res=os.popen('cmd').read()
-	print(res)
+	os.system(cmd)
+	cmd2=f'docker ps -a'
+	print(os.popen(cmd2).read())
 def dlt_container():
 	#delete container
 	container_name = input("Enter container name : ")

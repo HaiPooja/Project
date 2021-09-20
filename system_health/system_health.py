@@ -6,11 +6,11 @@ def display_available_ram():
 	print("____memory details______")
 	print(mem)
 def display_load_avg():
-	#Display Load avearge
+	#Display Load average
 	cmd = 'cat /proc/loadavg'
 	res = os.popen(cmd).read()
 	print(res)
-def display_host_deatails():
+def display_host_details():
 	#Display Hostname details
 	cmd = 'hostnamectl status'
 	res = os.popen(cmd).read()

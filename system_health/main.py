@@ -20,7 +20,7 @@ while True:
 	elif ch == 2:
 		display_load_avg()
 	elif ch == 3:
-		display_host_deatails()
+		display_host_details()
 	elif ch == 4:
 		display_all_process_c()
 	elif ch == 5:

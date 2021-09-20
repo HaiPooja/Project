@@ -54,11 +54,11 @@ def trun_on_off_interface():
 	if ch == 1:
 		cmd = f'ip link set dev {choice} up'
 		res = os.popen(cmd).read()
-		print(f'{choice} turned on | Details :{res}')
+		print(f'{choice} turned on')
 	elif ch ==2:
 		cmd = f'ip link set dev {choice} down'
 		res = os.popen(cmd).read()
-		print(f'{choice} turned off | Details :{res}')
+		print(f'{choice} turned off')
 	else:
 		print("Invalid")
 		

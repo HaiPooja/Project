@@ -7,6 +7,8 @@ db = mysql.connect(host='localhost', user='root',
                    password='root', db="INFORMATION_SCHEMA")
 cur = db.cursor()
 
+cur.execute('select ID,USER,HOST,DB,INFO from PROCESSLIST')
+res1 = cur.fetchall()
 cur.execute('SHOW STATUS')
 res = cur.fetchall()
 
@@ -24,5 +26,5 @@ print(
     f"Queries : {r['Queries']}")
 print(
     f"Max_used_connections : {r['Max_used_connections']}")
-
+print(f"Process list",res1)
 cur.close()
